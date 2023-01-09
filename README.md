@@ -7,7 +7,7 @@ Développeur / Développeuse :
  - Salma Wadouachi
  - Valérie Song
  - Hugo Fesniere
- - Hugo Da Cruz Silva
+ - Hugo Da Cruz Lopes
  - Maxime Aït Adda
  
  Stack utilisés :
