@@ -6,7 +6,7 @@ Développeur / Développeuse :
  - Morgane Dassonville
  - Salma Wadouachi
  - Valérie Song
- - Hugo Fesnière
+ - Hugo Fesniere
  - Hugo Da Cruz Silva
  - Maxime Aït Adda
  
