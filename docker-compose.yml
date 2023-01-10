@@ -21,7 +21,7 @@ services:
     volumes:
       - ./app:/var/www/html
 
-  db:
+  database:
     container_name: database
     image: mariadb:10.8
     restart: always
