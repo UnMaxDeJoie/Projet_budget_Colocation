@@ -26,6 +26,7 @@ services:
     image: mariadb:10.8
     restart: always
     environment:
+      MYSQL_DATABASE: gestion
       MYSQL_ROOT_PASSWORD: password
     volumes:
       - ./migration/dump.sql:/docker-entrypoint-initdb.d/dump.sql
