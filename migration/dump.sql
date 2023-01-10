@@ -5,8 +5,7 @@ CREATE TABLE IF NOT EXISTS User
     password  VARCHAR(255) NOT NULL,
     email     VARCHAR(255) NOT NULL,
     firstName VARCHAR(255),
-    lastName  VARCHAR(255),
-    gender    CHAR(1)
+    lastName  VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS Payments
@@ -16,4 +15,11 @@ CREATE TABLE IF NOT EXISTS Payments
     description TEXT,
     UserId INT NOT NULL,
     CONSTRAINT FK_PaymentsUser FOREIGN KEY (UserId) REFERENCES User(id_User)
+);
+
+CREATE TABLE IF NOT EXISTS GroupColoc
+(
+    id  INT,
+    CONSTRAINT FK_UserGroupColoc FOREIGN KEY (id) REFERENCES User (id_User),
+    roles     JSON         NOT NULL
 );
