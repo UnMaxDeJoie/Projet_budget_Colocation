@@ -23,3 +23,4 @@ CREATE TABLE IF NOT EXISTS GroupColoc
     CONSTRAINT FK_UserGroupColoc FOREIGN KEY (id) REFERENCES User (id_User),
     roles     JSON         NOT NULL
 );
+
