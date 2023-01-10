@@ -21,11 +21,12 @@ services:
     volumes:
       - ./app:/var/www/html
 
-  database:
+  db:
+    container_name: database
     image: mariadb:10.8
     restart: always
     environment:
-      MARIADB_DATABASE: gestion
+      MYSQL_DATABASE: gestion
       MYSQL_ROOT_PASSWORD: password
     volumes:
       - ./migration/dump.sql:/docker-entrypoint-initdb.d/dump.sql
@@ -34,4 +35,4 @@ services:
     image: adminer
     restart: always
     ports:
-      - "1616:8080"
+      - "7566:8080"
