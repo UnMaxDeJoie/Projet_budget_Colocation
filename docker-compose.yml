@@ -22,10 +22,11 @@ services:
       - ./app:/var/www/html
 
   database:
+    container_name: database
     image: mariadb:10.8
     restart: always
     environment:
-      MARIADB_DATABASE: gestion
+      MYSQL_DATABASE: gestion
       MYSQL_ROOT_PASSWORD: password
     volumes:
       - ./migration/dump.sql:/docker-entrypoint-initdb.d/dump.sql
