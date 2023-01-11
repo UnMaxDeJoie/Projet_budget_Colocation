@@ -1,7 +1,7 @@
 import './App.css';
 import Container from "react-bootstrap/Container";
 import {Button, Stack} from "react-bootstrap";
-import Card from "./Card";
+import BudgetCard from "./BudgetCard";
 
 function App() {
   return <container>
@@ -11,7 +11,6 @@ function App() {
       <Button variant="outline-primary">Ajouter une dépense</Button>
     </Stack>
     <div className="card">
-
     </div>
   </container>
 }
