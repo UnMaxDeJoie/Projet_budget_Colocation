@@ -8,10 +8,15 @@ function App() {
     <Stack direction="horizontal" gap="2" className={"mb-4 mt-4"}>
       <h1 className="me-auto">Coloc & Co</h1>
       <Button variant="primary">Ajouter un Budget</Button>
-      <Button variant="outline-primary">Ajouter une dépense</Button>
+      <Button variant="outline-primary">Changer de Budget</Button>
     </Stack>
     <div className="cards">
-      <BudgetCard name="Alimentaire" amount={700} max={1000}></BudgetCard>
+      <BudgetCard name="Alimentaire"
+                  gray
+                  amount={300}
+                  max={1000}>
+
+      </BudgetCard>
     </div>
   </Container>
 }
