@@ -7,17 +7,6 @@ const BudgetContext = React.createContext()
 export function useBudgets() {
     return useContext(BudgetContext)
 }
-// {
-//     id:
-//     name:
-//     max
-// }
-// {
-//     id:
-//     budgetId:
-//     amount:
-//     description:
-// }
 
 export const BudgetsProvider = ({ children }) => {
     const [budgets, setBudgets] = useLocalStorage("budgets",[])

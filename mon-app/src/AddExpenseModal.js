@@ -1,6 +1,6 @@
 import {Button, Modal, Form} from "react-bootstrap";
 import { useRef } from "react";
-import {useBudgets} from "./BudgetsContext";
+import { useBudgets } from "./BudgetsContext";
 
 export default function AddExpenseModal({ show, handleClose, defaultBudgetId }){
     const descriptionRef = useRef()
@@ -38,16 +38,14 @@ export default function AddExpenseModal({ show, handleClose, defaultBudgetId }){
                             step={0.01}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="budgetId">
-                        <Form.Label>Fait partie du budget :</Form.Label>
-                        <Form.Select
-                            defaultValue={defaultBudgetId}
-                            ref={budgetIdRef}
+                        <Form.Label>Mettre dans le budget :</Form.Label>
+                        <Form.Select defaultValue={defaultBudgetId} ref={budgetIdRef}>
                             {budgets.map(budget => (
                                 <option key={budget.id} value={budget.id}>
-                                    {budget.nme}
+                                    {budget.name}
                                 </option>
                             ))}
-                        />
+                        </Form.Select>
                     </Form.Group>
                     <div className="d-flex justify-content-end">
                         <Button variant="primary" type="submit">Envoyer</Button>
