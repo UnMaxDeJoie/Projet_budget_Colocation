@@ -38,7 +38,7 @@ export default function BudgetCard({ name, amount, max, gray, onAddExpenseClick 
 
 function getProgress(amount, max){
     const ratio = amount / max
-    if (ratio < .5) return "success"
-    if (ratio < .75) return "warning"
+    if (ratio < .5) return "primary"
+    if (ratio < .75) return "success"
     return "danger"
 }
