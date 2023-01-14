@@ -23,7 +23,7 @@ function App() {
       <Container className="my-4">
         <Stack direction="horizontal" gap="2" className={"mb-4 mt-4"}>
           <h1 className="me-auto">Coloc & Co</h1>
-          <Button variant="succes" onClick={() => setShowAddBudgetModal(true)}>Ajouter un Budget</Button>
+          <Button variant="success" onClick={() => setShowAddBudgetModal(true)}>Ajouter un Budget</Button>
           <Button variant="outline-success" onClick={openAddExpenseModal}>Nouvelle dépense</Button>
         </Stack>
         <div className="cards">

@@ -28,8 +28,8 @@ export default function BudgetCard({ name, amount, max, gray, onAddExpenseClick 
                              now={amount}
                 />
                 <Stack direction="horizontal" gap="2" className="mt-4">
-                    <Button variant="outline-warning" className="ms-auto" onClick={onAddExpenseClick}>X Bouton en panne X</Button>
-                    <Button variant="outline-info">Voir les dépenses</Button>
+                    <Button variant="warning" className="ms-auto" onClick={onAddExpenseClick}>X Bouton en panne X</Button>
+                    <Button variant="outline-primary">Voir les dépenses</Button>
                 </Stack>
             </Card.Body>
         </Card>
@@ -38,7 +38,7 @@ export default function BudgetCard({ name, amount, max, gray, onAddExpenseClick 
 
 function getProgress(amount, max){
     const ratio = amount / max
-    if (ratio < .5) return "primary"
+    if (ratio < .5) return "success"
     if (ratio < .75) return "warning"
     return "danger"
 }
