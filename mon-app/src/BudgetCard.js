@@ -27,9 +27,9 @@ export default function BudgetCard({ name, amount, max, gray, onAddExpenseClick 
                              max={max}
                              now={amount}
                 />
-                <Stack direction="horizontal" gap="2" className="mt-4" onClick={onAddExpenseClick}>
-                    <Button variant="outline-primary" className="ms-auto">Ajouter une dépense</Button>
-                    <Button variant="outline-secondary">Voir les dépenses</Button>
+                <Stack direction="horizontal" gap="2" className="mt-4">
+                    <Button variant="outline-warning" className="ms-auto" onClick={onAddExpenseClick}>X Bouton en panne X</Button>
+                    <Button variant="outline-info">Voir les dépenses</Button>
                 </Stack>
             </Card.Body>
         </Card>

@@ -9,12 +9,12 @@ import {useBudgets} from "./BudgetsContext";
 
 function App() {
   const [showAddBudgetModal, setShowAddBudgetModal] = useState(false)
-  const [showAddExpenseModal, setShowAddEpenseModal] = useState(false)
+  const [showAddExpenseModal, setShowAddExpenseModal] = useState(false)
   const [addExpenseModalBudgetId, setAddExpenseModalBudgetId] = useState()
   const { budgets, getBudgetExpenses } = useBudgets()
 
   function openAddExpenseModal(budgetId){
-      setShowAddEpenseModal(true)
+      setShowAddExpenseModal(true)
       setAddExpenseModalBudgetId(budgetId)
   }
 
@@ -23,8 +23,8 @@ function App() {
       <Container className="my-4">
         <Stack direction="horizontal" gap="2" className={"mb-4 mt-4"}>
           <h1 className="me-auto">Coloc & Co</h1>
-          <Button variant="primary" onClick={() => setShowAddBudgetModal(true)}>Ajouter un Budget</Button>
-          <Button variant="outline-primary" onClick={openAddExpenseModal}>Nouvelle dépense</Button>
+          <Button variant="succes" onClick={() => setShowAddBudgetModal(true)}>Ajouter un Budget</Button>
+          <Button variant="outline-success" onClick={openAddExpenseModal}>Nouvelle dépense</Button>
         </Stack>
         <div className="cards">
           { budgets.map(budget => {
