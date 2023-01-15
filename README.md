@@ -15,3 +15,9 @@ Développeur / Développeuse :
  - React JS
  - PHP natif
  - Docker
+
+## Pour lancer le projet:
+- cd Projet_budget_Colocation
+- docker compose up -d
+- cd mon-app
+- npm start
