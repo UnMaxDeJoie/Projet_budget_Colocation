@@ -3,27 +3,28 @@ version: "3.8"
 services:
   frontend:
     build:
-      context: ./reactConf
+      context: mon-app
       dockerfile: Dockerfile
     ports:
-      - "1357:3000"
+      - "3000:3000"
     volumes:
-      - ./mon-app:/project
-    command: npm run start
+      - ./mon-app:/app
+    restart: always
+    command: sh -c "npm rebuild esbuild && npm start"
 
   backend:
     build:
-      context: ./phpConf
+      context: app
       dockerfile: Dockerfile
     restart: always
     ports:
-      - "2468:80"
+      - "2345:80"
     volumes:
       - ./app:/var/www/html
 
   database:
     container_name: database
-    image: mariadb:10.8
+    image: mariadb:10.4
     restart: always
     environment:
       MYSQL_DATABASE: gestion
