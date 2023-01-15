@@ -85,3 +85,11 @@ a {
   grid-column: 2 / 5;
   box-shadow: 10px 10px 20px rgba(50, 50, 50, 0.1);
 }
+
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  align-items: flex-start;
+}

@@ -6,11 +6,11 @@ services:
       context: mon-app
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "3687:3000"
     volumes:
       - ./mon-app:/app
     restart: always
-    command: sh -c "npm rebuild esbuild && npm start"
+    command: sh -c "npm start"
 
   backend:
     build:

@@ -6,8 +6,12 @@ import Profil from "./Pages/Profil";
 import Navigation from "./Composant/Navigation";
 import Header from "./Composant/Header";
 import Group from "./Pages/Group";
+import './App.css';
+import Resume from "./Pages/Resume";
+
 
 function App() {
+
     return (
         <div className="App">
             <Header />

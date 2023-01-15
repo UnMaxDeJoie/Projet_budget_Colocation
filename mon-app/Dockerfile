@@ -4,4 +4,6 @@ WORKDIR /app
 
 RUN yarn global add vite
 
-npm install react-router-dom
+RUN npm install react-router-dom
+
+
